@@ -6,8 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: iamet-zebra-landing
-    ports:
-      - "89:89"
+    network_mode: "host"
     environment:
       - NODE_ENV=production
       - PORT=89
@@ -21,9 +20,3 @@ services:
       timeout: 10s
       retries: 3
       start_period: 40s
-    networks:
-      - iamet-network
-
-networks:
-  iamet-network:
-    driver: bridge
