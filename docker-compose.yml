@@ -7,16 +7,16 @@ services:
       dockerfile: Dockerfile
     container_name: iamet-zebra-landing
     ports:
-      - "3000:3000"
+      - "89:89"
     environment:
       - NODE_ENV=production
-      - PORT=3000
+      - PORT=89
       - HOSTNAME=0.0.0.0
     env_file:
       - .env.production
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/api/health || exit 1"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:89/api/health || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3

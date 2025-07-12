@@ -25,6 +25,7 @@ PRPs/
 
 # Local Environment Variables
 .env*.local
+.env.production
 
 # Logs
 npm-debug.log*
