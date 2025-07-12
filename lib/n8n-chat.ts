@@ -18,11 +18,12 @@ export const N8N_WEBHOOK_URL = 'https://riveddy7.app.n8n.cloud/webhook/53c136fe-
 
 // Generate the product list string for context
 const productList = zebraCategories
+  .filter((cat) => cat.products && cat.products.length > 0)
   .map(
     (cat) =>
       `- ${cat.name}: ${cat.description}\n  Productos: ${cat.products
-        .map((p) => p.name)
-        .join(', ')}`
+        ?.map((p) => p.name)
+        .join(', ') ?? 'Sin productos disponibles'}`
   )
   .join('\n\n');
 
