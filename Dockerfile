@@ -6,8 +6,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install all dependencies (including devDependencies for build)
+RUN npm ci
 
 # Copy source code
 COPY . .
@@ -36,7 +36,7 @@ USER nextjs
 
 EXPOSE 89
 
-ENV PORT 89
-ENV HOSTNAME "0.0.0.0"
+ENV PORT=89
+ENV HOSTNAME="0.0.0.0"
 
 CMD ["node", "server.js"]
