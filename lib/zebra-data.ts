@@ -695,7 +695,7 @@ export const getCategoryBySlug = (slug: string): ZebraCategory | undefined => {
 
 export const getProductBySlug = (slug: string): ZebraProduct | undefined => {
   for (const category of zebraCategories) {
-    const product = category.products.find(p => p.slug === slug);
+    const product = category.products?.find(p => p.slug === slug);
     if (product) return product;
   }
   return undefined;
