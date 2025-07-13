@@ -6,7 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: iamet-zebra-landing
-    network_mode: "host"
+    ports:
+      - "3000:3000"
     environment:
       - NODE_ENV=production
       - PORT=3000
