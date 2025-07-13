@@ -217,7 +217,7 @@ export function getProductRecommendations(
   currentProduct?: ZebraProduct,
   limit: number = 3
 ): ZebraProduct[] {
-  return category.products
+  return (category.products ?? [])
     .filter(product => product.id !== currentProduct?.id)
     .slice(0, limit);
 }
