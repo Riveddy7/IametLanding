@@ -97,8 +97,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Main headline with enhanced mobile typography */}
             <h1 className={cn(
-              'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold',
-              'text-white leading-tight mb-4 lg:mb-6',
+              'text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold',
+              'text-white leading-tight mb-6 lg:mb-6',
               'bg-gradient-to-r from-white via-white to-zebra-blue-400 bg-clip-text text-transparent',
               'animate-fade-in'
             )}>
@@ -106,42 +106,42 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </h1>
 
             {/* Subtitle with better mobile spacing */}
-            <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-6 lg:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-xl sm:text-2xl md:text-2xl text-white/90 mb-8 lg:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
               {subtitle}
             </p>
 
             {/* Feature highlights with improved mobile layout */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6 lg:mb-8">
-              <div className="flex items-center justify-center lg:justify-start gap-3 text-white/90 p-2 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <div className="w-8 h-8 bg-zebra-blue-600/20 rounded-full flex items-center justify-center animate-pulse-glow">
-                  <Zap className="w-4 h-4 text-zebra-blue-400" />
+            <div className="grid grid-cols-1 gap-4 mb-8 lg:mb-8">
+              <div className="flex items-center justify-center lg:justify-start gap-4 text-white/90 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                <div className="w-10 h-10 bg-zebra-blue-600/20 rounded-full flex items-center justify-center animate-pulse-glow">
+                  <Zap className="w-5 h-5 text-zebra-blue-400" />
                 </div>
-                <span className="text-sm md:text-base font-medium">Productividad +40%</span>
+                <span className="text-lg md:text-xl font-semibold">Productividad +40%</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start gap-3 text-white/90 p-2 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <div className="w-8 h-8 bg-zebra-blue-600/20 rounded-full flex items-center justify-center animate-pulse-glow" style={{animationDelay: '0.5s'}}>
-                  <Wrench className="w-4 h-4 text-zebra-blue-400" />
+              <div className="flex items-center justify-center lg:justify-start gap-4 text-white/90 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                <div className="w-10 h-10 bg-zebra-blue-600/20 rounded-full flex items-center justify-center animate-pulse-glow" style={{animationDelay: '0.5s'}}>
+                  <Wrench className="w-5 h-5 text-zebra-blue-400" />
                 </div>
-                <span className="text-sm md:text-base font-medium">Soporte Local</span>
+                <span className="text-lg md:text-xl font-semibold">Soporte Local</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start gap-3 text-white/90 p-2 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors sm:col-span-2 lg:col-span-1">
-                <div className="w-8 h-8 bg-zebra-blue-600/20 rounded-full flex items-center justify-center animate-pulse-glow" style={{animationDelay: '1s'}}>
-                  <Shield className="w-4 h-4 text-zebra-blue-400" />
+              <div className="flex items-center justify-center lg:justify-start gap-4 text-white/90 p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                <div className="w-10 h-10 bg-zebra-blue-600/20 rounded-full flex items-center justify-center animate-pulse-glow" style={{animationDelay: '1s'}}>
+                  <Shield className="w-5 h-5 text-zebra-blue-400" />
                 </div>
-                <span className="text-sm md:text-base font-medium">Garantía Total</span>
+                <span className="text-lg md:text-xl font-semibold">Garantía Total</span>
               </div>
             </div>
 
             {/* Enhanced CTA buttons with better mobile layout */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col gap-4 justify-center lg:justify-start">
               <Button
                 variant="primary"
                 size="lg"
                 onClick={handleCTAClick}
-                className="group relative overflow-hidden animate-pulse-glow"
+                className="group relative overflow-hidden animate-pulse-glow text-lg font-semibold py-4 px-8"
               >
                 <span className="relative z-10">{ctaText}</span>
-                <ArrowRight className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-6 h-6 relative z-10 transition-transform group-hover:translate-x-1" />
                 {/* Shimmer effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
               </Button>
@@ -155,7 +155,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     element.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="group hover:scale-105 transition-transform duration-300"
+                className="group hover:scale-105 transition-transform duration-300 text-lg font-semibold py-4 px-8"
               >
                 Hablar con un Experto
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse ml-2" />
@@ -182,7 +182,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {/* Right column - Enhanced Visual element */}
-          <div className="relative order-first lg:order-last">
+          <div className="relative order-last">
             
             {/* Hero product showcase */}
             <div className="relative mb-6 lg:mb-0">
@@ -218,7 +218,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 
                 {/* Enhanced content */}
                 <div className="relative z-10">
-                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-6">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 text-center lg:text-left">
                     ¿Por qué elegir Zebra?
                   </h3>
                   

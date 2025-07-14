@@ -154,7 +154,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       'rfid': 'https://medialibrary.zebra.com/content/dam/zebra_dam/global/photography/application/0008/manufacturing-photography-application-fxr90-rfid-antenna-food-chicken-an520.tif/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg',
       'computadoras-moviles': 'https://medialibrary.zebra.com/content/dam/zebra_dam/global/photography/application/0008/retail-photography-application-store-clothing-close-up-rfid-et40-rfd40.tif/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg',
       'vision-artificial': 'https://medialibrary.zebra.com/content/dam/zebra_dam/global/photography/application/0008/electronics-photography-application-fs80-code-reading.tif/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg',
-      'consumibles': 'https://www.zebra.com/content/dam/zebra_dam/global/zcom-web-production/web-production-photography/zcom-products-page/printing-supplies-products-photography-website-4x3-3600.jpg'
+      'consumibles': 'https://medialibrary.zebra.com/content/dam/zebra_dam/global/photography/product/0021/ready-to-use-environmental-sensors-supplies-photography-website-16x9.jpg.renditions/card/asset.rendition'
     };
     return imageMap[categoryId] || imageMap['impresoras'];
   };

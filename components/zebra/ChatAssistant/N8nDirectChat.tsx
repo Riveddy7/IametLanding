@@ -161,7 +161,7 @@ const N8nDirectChat: React.FC<N8nDirectChatProps> = ({ className }) => {
    * Abre Calendly para agendar reunión
    */
   const openCalendly = () => {
-    const calendlyUrl = 'https://calendly.com/iamet-zebra/consulta';
+    const calendlyUrl = 'https://calendly.com/eduardo-rivera-baja-net/30min';
     window.open(calendlyUrl, '_blank');
   };
 

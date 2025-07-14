@@ -50,11 +50,21 @@ NEXT_PUBLIC_SITE_URL=https://iamet.mx
 
 ### 3. Ejecutar en Desarrollo
 
+**Desarrollo Local:**
 ```bash
 npm run dev
 ```
-
 La aplicación estará disponible en `http://localhost:3000/zebra`
+
+**Acceso desde Red Local (móviles, tablets, otras computadoras):**
+```bash
+npm run dev:network
+```
+La aplicación estará disponible en:
+- **Tu dispositivo**: `http://localhost:3000/zebra`
+- **Otros dispositivos en la red**: `http://192.168.100.92:3000/zebra`
+
+> 💡 **Nota**: Asegúrate de que todos los dispositivos estén conectados a la misma red WiFi. Tu IP puede ser diferente - verifica con `ifconfig` en macOS/Linux o `ipconfig` en Windows.
 
 ### 4. Build de Producción
 
